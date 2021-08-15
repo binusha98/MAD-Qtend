@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Inquiry</string>
+    <string name="raddinquiry">Add Inquiry</string>
+    <string name="rempID">Employee ID</string>
+    <string name="rempName">Employee Name</string>
+    <string name="rEmail">Email</string>
+    <string name="rDate">Date</string>
+    <string name="rInquiryType">Inquiry Type</string>
+    <string name="rConfirmationInquiry">Confirmation Inquiry</string>
+    <string name="rGuidedInquiry">Guided Inquiry</string>
+    <string name="rOtherInquiry">Other Inquiry</string>
+    <string name="rDescription">Description</string>
+    <string name="rEditInquiry">Edit Inquiry</string>
+    <string name="rDeleteInquiry">Delete Inquiry</string>
+    <string name="rSearchInqury">Search Inqury</string>
+    <string name="rEnterEmployeeName">Enter Employee Name</string>
+    <string name="rSearchInquiry">Search Inquiry</string>
+    <string name="rMyInquiry">My Inquiry</string>
+</resources>
