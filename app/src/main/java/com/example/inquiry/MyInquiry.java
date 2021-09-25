@@ -42,6 +42,11 @@ public class MyInquiry extends AppCompatActivity {
             startActivity(updateIntent);
         }
 
+        if (id == R.id.textView43){
+            Intent updateIntent = new Intent(MyInquiry.this,HowAboutOurService.class);
+            startActivity(updateIntent);
+        }
+
         return super.onOptionsItemSelected(item);
     }
 }

@@ -16,4 +16,6 @@
     <string name="rEnterEmployeeName">Enter Employee Name</string>
     <string name="rSearchInquiry">Search Inquiry</string>
     <string name="rMyInquiry">My Inquiry</string>
+    <string name="submit">Submit</string>
+    <string name="rHowAboutOurService">How About Our Service</string>
 </resources>

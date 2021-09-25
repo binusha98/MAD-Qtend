@@ -126,28 +126,42 @@
 
             <RadioGroup
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup">
 
                 <RadioButton
                     android:id="@+id/radioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/rConfirmationInquiry"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:onClick="SelectInquiryType"
+                    />
 
                 <RadioButton
                     android:id="@+id/radioButton2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/rGuidedInquiry"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:onClick="SelectInquiryType"/>
 
                 <RadioButton
                     android:id="@+id/radioButton3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/rOtherInquiry"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:onClick="SelectInquiryType"/>
+
+                <TextView
+                    android:id="@+id/result_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Select Inquiry Type"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="15sp" />
             </RadioGroup>
         </TableRow>
 
@@ -183,5 +197,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/raddinquiry"
+        app:backgroundTint="#229CFC" />
+
+    <Button
+        android:id="@+id/button_openI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open Inquiry"
         app:backgroundTint="#229CFC" />
 </LinearLayout>

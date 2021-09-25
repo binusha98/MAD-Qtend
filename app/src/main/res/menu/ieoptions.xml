@@ -19,11 +19,21 @@
         app:actionViewClass="android.widget.SearchView" />
 
     <item
+        android:id="@+id/textView43"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/rHowAboutOurService"
+        app:actionViewClass="android.widget.SearchView" />
+
+    <item
         android:icon="@android:drawable/ic_menu_search"
         android:title="Search"
         app:showAsAction="always" />
     <item
         android:icon="@drawable/profile1"
         android:title="Profile"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/bell"
+        android:title="Notification"
         app:showAsAction="always" />
 </menu>
