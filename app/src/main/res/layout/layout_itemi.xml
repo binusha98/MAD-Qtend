@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="2dp">
+    android:layout_margin="2dp"
+    android:background="@drawable/addemp">
 
     <TextView
+        android:id="@+id/txt_option"
         android:layout_width="20dp"
         android:layout_height="wrap_content"
-        android:text="&#8942;"
-        android:textSize="20sp"
-        android:id="@+id/txt_option"
         android:layout_gravity="right"
+        android:text="&#8942;"
         android:textAlignment="center"
+        android:textSize="20sp"
         tools:ignore="RtlCompat" />
 
     <LinearLayout
@@ -37,12 +38,12 @@
                 android:id="@+id/textView22"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:background="#229CFC"
                 android:gravity="center"
                 android:text="@string/rSearchInquiry"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
-                android:layout_marginBottom="5dp"
                 android:textStyle="bold"
                 tools:ignore="TextContrastCheck" />
 
@@ -69,7 +70,8 @@
                         android:text="@string/rSearchInquiry"
                         android:textSize="12sp"
                         app:backgroundTint="#229CFC"
-                        app:iconPadding="60dp" />
+                        app:iconPadding="60dp"
+                        tools:ignore="TouchTargetSizeCheck" />
 
                 </TableRow>
             </TableLayout>
@@ -96,7 +98,8 @@
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="textPersonName"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                        tools:text="EMP0002" />
                 </TableRow>
 
                 <TableRow
@@ -108,7 +111,7 @@
                         android:layout_width="89dp"
                         android:layout_height="wrap_content"
                         android:text="@string/rempName"
-                        android:textSize="16sp"
+                        android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <EditText
@@ -117,7 +120,8 @@
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="textPersonName"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                        tools:text="Ishan Kalpadith" />
                 </TableRow>
 
                 <TableRow
@@ -138,7 +142,8 @@
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="textEmailAddress"
-                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                        tools:text="ishan@gmail.com" />
                 </TableRow>
 
                 <TableRow
@@ -159,7 +164,8 @@
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="date"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                        tools:text="2021/07/11" />
                 </TableRow>
 
                 <TableRow
@@ -181,20 +187,23 @@
                         <RadioButton
                             android:id="@+id/radioButton10"
                             android:layout_width="wrap_content"
-                            android:layout_height="38dp"
-                            android:text="@string/rConfirmationInquiry" />
+                            android:layout_height="30dp"
+                            android:text="@string/rConfirmationInquiry"
+                            tools:ignore="TouchTargetSizeCheck" />
 
                         <RadioButton
                             android:id="@+id/radioButton11"
                             android:layout_width="wrap_content"
-                            android:layout_height="32dp"
-                            android:text="@string/rGuidedInquiry" />
+                            android:layout_height="26dp"
+                            android:text="@string/rGuidedInquiry"
+                            tools:ignore="TouchTargetSizeCheck" />
 
                         <RadioButton
                             android:id="@+id/radioButton12"
                             android:layout_width="wrap_content"
-                            android:layout_height="30dp"
-                            android:text="@string/rOtherInquiry" />
+                            android:layout_height="21dp"
+                            android:text="@string/rOtherInquiry"
+                            tools:ignore="TouchTargetSizeCheck" />
                     </RadioGroup>
                 </TableRow>
 
@@ -213,11 +222,12 @@
                     <EditText
                         android:id="@+id/editTextTextMultiLine4"
                         android:layout_width="192dp"
-                        android:layout_height="63dp"
+                        android:layout_height="wrap_content"
                         android:ems="10"
                         android:gravity="start|top"
                         android:inputType="textMultiLine"
-                        tools:ignore="SpeakableTextPresentCheck" />
+                        tools:ignore="SpeakableTextPresentCheck"
+                        tools:text="I would like to ask you about the cost of project and the quality of the materials number 106." />
                 </TableRow>
             </TableLayout>
         </LinearLayout>

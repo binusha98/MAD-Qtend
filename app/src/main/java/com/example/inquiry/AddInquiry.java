@@ -20,12 +20,7 @@ import java.util.HashMap;
 
 public class AddInquiry extends AppCompatActivity {
     TextView final_result;
-   // Button b;
     Inquiryn inquiryn;
-  //  RadioButton radioButton,radioButton2,radioButton3;
-  //  FirebaseDatabase database;
-  //  DatabaseReference reference;
-  //  int i=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +46,6 @@ public class AddInquiry extends AppCompatActivity {
             startActivity(intent);
         });
 
-        ///reference = database.getInstance().getReference().child("User");
         DAOInquiryn dao = new DAOInquiryn();
         Inquiryn inqn_edit = (Inquiryn)getIntent().getSerializableExtra("EDIT");
         if (inqn_edit !=null){
@@ -76,21 +70,7 @@ public class AddInquiry extends AppCompatActivity {
         {
 
             Inquiryn inqn = new Inquiryn(editTextTextPersonName.getText().toString(),editTextTextPersonName2.getText().toString(),editTextTextEmailAddress.getText().toString(),editTextDate.getText().toString(),editTextTextMultiLine.getText().toString(),radioButton.getText().toString(),radioButton2.getText().toString(),radioButton3.getText().toString());
-            ///String n1 = radioButton.getText().toString();
-            ///String n2 = radioButton2.getText().toString();
-            ///String n3 = radioButton3.getText().toString();
 
-            /// if (radioButton.isChecked()){
-            ///inquiryn.setInquiryType(n1);
-                //reference.child(String[].valueOf(i+1).setValue(inquiryn);
-
-            ///}else if(radioButton2.isChecked()){
-            ///inquiryn.setInquiryType(n2);
-                //reference.child(String[].valueOf(i+1).setValue(inquiryn);
-            ///}else{
-            /// inquiryn.setInquiryType(n3);
-            ///  //reference.child(String[].valueOf(i+1).setValue(inquiryn);
-            ///}
             if(inqn_edit==null)
             {
 
@@ -124,12 +104,6 @@ public class AddInquiry extends AppCompatActivity {
             }
 
         });
-
-        //Button OpenInquiries = findViewById(R.id.button_openI);
-        //OpenInquiries.setOnClickListener(v->
-        //{
-            //Intent intent = new Intent(AddInquiry.this,SearchInquiries.class);
-           // startActivity(intent); });
     }
     @SuppressLint({"NonConstantResourceId", "SetTextI18n"})
     public void SelectInquiryType(View view)
