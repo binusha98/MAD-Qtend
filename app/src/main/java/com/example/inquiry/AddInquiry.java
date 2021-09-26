@@ -16,33 +16,26 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-//import com.google.firebase.database.DatabaseReference;
-//import com.google.firebase.database.FirebaseDatabase;
+import java.util.HashMap;
 
 public class AddInquiry extends AppCompatActivity {
     TextView final_result;
-
    // Button b;
     Inquiryn inquiryn;
   //  RadioButton radioButton,radioButton2,radioButton3;
   //  FirebaseDatabase database;
   //  DatabaseReference reference;
   //  int i=0;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_inquiry);
         final_result = (TextView)findViewById(R.id.result_text);
         final_result.setEnabled(false);
-
         final EditText editTextTextPersonName = findViewById(R.id.editTextTextPersonName);
         final EditText editTextTextPersonName2 = findViewById(R.id.editTextTextPersonName2);
         final EditText editTextTextEmailAddress = findViewById(R.id.editTextTextEmailAddress);
         final EditText editTextDate = findViewById(R.id.editTextDate);
-
         inquiryn = new Inquiryn();
         RadioButton radioButton = findViewById(R.id.radioButton);
         RadioButton radioButton2 = findViewById(R.id.radioButton2);
@@ -51,11 +44,33 @@ public class AddInquiry extends AppCompatActivity {
         final EditText editTextTextMultiLine = findViewById(R.id.editTextTextMultiLine);
 
         Button button = findViewById(R.id.button);
+        Button button_openI = findViewById(R.id.button_openI);
+        button_openI.setOnClickListener(v->
+        {
+            Intent intent = new Intent(AddInquiry.this,SearchInquiries.class);
+            startActivity(intent);
+        });
 
         ///reference = database.getInstance().getReference().child("User");
-
         DAOInquiryn dao = new DAOInquiryn();
-        getIntent().getSerializableExtra("EDIT");
+        Inquiryn inqn_edit = (Inquiryn)getIntent().getSerializableExtra("EDIT");
+        if (inqn_edit !=null){
+            button.setText("UPDATE");
+            editTextTextPersonName.setText(inqn_edit.getEmployee_ID());
+            editTextTextPersonName2.setText(inqn_edit.getEmployee_Name());
+            editTextTextEmailAddress.setText(inqn_edit.getEmployee_Email());
+            editTextDate.setText(inqn_edit.getEmployee_IDate());
+            editTextTextMultiLine.setText(inqn_edit.getIDescription());
+            radioButton.setText(inqn_edit.getConfirmationInquiry());
+            radioButton2.setText(inqn_edit.getGuidedInquiry());
+            radioButton3.setText(inqn_edit.getOtherInquiry());
+            button_openI.setVisibility(View.GONE);
+        }
+        else
+            {
+                button.setText("SUBMIT");
+                button_openI.setVisibility(View.VISIBLE);
+            }
 
         button.setOnClickListener(v->
         {
@@ -76,23 +91,45 @@ public class AddInquiry extends AppCompatActivity {
             /// inquiryn.setInquiryType(n3);
             ///  //reference.child(String[].valueOf(i+1).setValue(inquiryn);
             ///}
+            if(inqn_edit==null)
+            {
 
-            dao.add(inqn).addOnSuccessListener(suc->
+                dao.add(inqn).addOnSuccessListener(suc ->
+                {
+                    Toast.makeText(this, "Your Inquiry is added", Toast.LENGTH_SHORT).show();
+                }).addOnFailureListener(er ->
+                {
+                    Toast.makeText(this, "" + er.getMessage(), Toast.LENGTH_SHORT).show();
+                });
+            }
+            else
             {
-                Toast.makeText(this, "Your Inquiry is added", Toast.LENGTH_SHORT).show();
-            }).addOnFailureListener(er->
-            {
-                Toast.makeText(this, ""+er.getMessage(), Toast.LENGTH_SHORT).show();
-            });
+                HashMap<String, Object> hashMap = new HashMap<>();
+                hashMap.put("Employee_ID", editTextTextPersonName.getText().toString());
+                hashMap.put("Employee_Name", editTextTextPersonName2.getText().toString());
+                hashMap.put("Employee_Email", editTextTextEmailAddress.getText().toString());
+                hashMap.put("Employee_IDate", editTextDate.getText().toString());
+                hashMap.put("IDescription", editTextTextMultiLine.getText().toString());
+                hashMap.put("ConfirmationInquiry", radioButton.getText().toString());
+                hashMap.put("GuidedInquiry", radioButton2.getText().toString());
+                hashMap.put("OtherInquiry", radioButton3.getText().toString());
+                dao.update(inqn_edit.getKey(), hashMap).addOnSuccessListener(suc ->
+                {
+                    Toast.makeText(this, "Record is updated", Toast.LENGTH_SHORT).show();
+                    finish();
+                }).addOnFailureListener(er ->
+                {
+                    Toast.makeText(this, "" + er.getMessage(), Toast.LENGTH_SHORT).show();
+                });
+            }
 
         });
 
-        Button button_openI = findViewById(R.id.button_openI);
-        button_openI.setOnClickListener(v->
-        {
-            Intent intent = new Intent(AddInquiry.this,SearchInquiries.class);
-            startActivity(intent);
-        });
+        //Button OpenInquiries = findViewById(R.id.button_openI);
+        //OpenInquiries.setOnClickListener(v->
+        //{
+            //Intent intent = new Intent(AddInquiry.this,SearchInquiries.class);
+           // startActivity(intent); });
     }
     @SuppressLint({"NonConstantResourceId", "SetTextI18n"})
     public void SelectInquiryType(View view)

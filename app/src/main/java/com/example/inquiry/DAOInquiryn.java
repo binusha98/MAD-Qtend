@@ -41,4 +41,8 @@ public class DAOInquiryn
         }
         return databaseReference.orderByKey().startAfter(key).limitToFirst(8);
     }
+    public Query get()
+    {
+        return databaseReference;
+    }
 }

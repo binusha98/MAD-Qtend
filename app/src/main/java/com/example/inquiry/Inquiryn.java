@@ -1,7 +1,13 @@
 package com.example.inquiry;
 
-public class Inquiryn
+import com.google.firebase.database.Exclude;
+
+import java.io.Serializable;
+
+public class Inquiryn implements Serializable
 {
+    @Exclude
+    private String key;
     private String Employee_ID;
     private String Employee_Name;
     private String Employee_Email;
@@ -100,6 +106,14 @@ public class Inquiryn
 
     public void setIDescription(String IDescription) {
         this.IDescription = IDescription;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
 

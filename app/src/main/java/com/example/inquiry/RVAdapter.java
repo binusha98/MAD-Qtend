@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupMenu;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -60,9 +61,22 @@ public class RVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                         intent.putExtra("EDIT", (Parcelable) inqn);
                         context.startActivity(intent);
                         break;
+                    case R.id.menu_remove:
+                        DAOInquiryn dao = new DAOInquiryn();
+                        dao.remove(inqn.getKey()).addOnSuccessListener(suc->
+                        {
+                            Toast.makeText(context,"Record is Removed",Toast.LENGTH_SHORT).show();
+                            notifyItemRemoved(position);
+                        }).addOnFailureListener(er->
+                        {
+                            Toast.makeText(context, ""+er.getMessage(), Toast.LENGTH_SHORT).show();
+                        });
+                        break;
 
                 }
+                return false;
             });
+            popupMenu.show();
         });
     }
 

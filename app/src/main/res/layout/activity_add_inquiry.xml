@@ -22,7 +22,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="54dp" />
+        android:layout_height="32dp" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -132,27 +132,26 @@
                 <RadioButton
                     android:id="@+id/radioButton"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/rConfirmationInquiry"
-                    android:textStyle="bold"
+                    android:layout_height="38dp"
                     android:onClick="SelectInquiryType"
-                    />
+                    android:text="@string/rConfirmationInquiry"
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/radioButton2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="33dp"
+                    android:onClick="SelectInquiryType"
                     android:text="@string/rGuidedInquiry"
-                    android:textStyle="bold"
-                    android:onClick="SelectInquiryType"/>
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/radioButton3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="38dp"
+                    android:onClick="SelectInquiryType"
                     android:text="@string/rOtherInquiry"
-                    android:textStyle="bold"
-                    android:onClick="SelectInquiryType"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/result_text"
@@ -167,7 +166,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="76dp">
 
             <TextView
                 android:id="@+id/textView7"
@@ -190,7 +189,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="37dp" />
+        android:layout_height="15dp" />
 
     <Button
         android:id="@+id/button"
@@ -203,6 +202,6 @@
         android:id="@+id/button_openI"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Open Inquiry"
+        android:text="@string/OpenInquiries"
         app:backgroundTint="#229CFC" />
 </LinearLayout>

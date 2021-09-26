@@ -1,21 +1,26 @@
 package com.example.inquiry;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Parcelable;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.PopupMenu;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-
-import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.widget.LinearLayout;
-import android.widget.Toast;
-
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.firebase.ui.database.SnapshotParser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
@@ -31,6 +36,7 @@ public class SearchInquiries extends AppCompatActivity {
     DAOInquiryn dao;
     boolean isLoading=false;
     String key =null;
+    FirebaseRecyclerAdapter adapter_;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +50,78 @@ public class SearchInquiries extends AppCompatActivity {
         adapter= new RVAdapter(this);
         recyclerView.setAdapter(adapter);
         dao = new DAOInquiryn();
+
+        FirebaseRecyclerOptions<Inquiryn> option = new FirebaseRecyclerOptions.Builder<Inquiryn>().setQuery(dao.get(), new SnapshotParser<Inquiryn>() {
+            @NonNull
+            @Override
+            public Inquiryn parseSnapshot(@NonNull DataSnapshot snapshot)
+            {
+                Inquiryn inqn = snapshot.getValue(Inquiryn.class);
+                inqn.setKey(snapshot.getKey());
+                return inqn;
+            }
+        }).build();
+
+        adapter_ = new FirebaseRecyclerAdapter(option) {
+            @Override
+            protected void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i, @NonNull Object o)
+            {
+                InquiryVH vh = (InquiryVH) viewHolder;
+                Inquiryn inqn = (Inquiryn)o;
+                vh.editTextTextPersonName.setText(inqn.getEmployee_ID());
+                vh.editTextTextPersonName2.setText(inqn.getEmployee_Name());
+                vh.editTextTextEmailAddress.setText(inqn.getEmployee_Email());
+                vh.editTextDate.setText(inqn.getEmployee_IDate());
+                vh.radioButton.setText(inqn.getConfirmationInquiry());
+                vh.radioButton2.setText(inqn.getGuidedInquiry());
+                vh.radioButton3.setText(inqn.getOtherInquiry());
+                vh.editTextTextMultiLine.setText(inqn.getIDescription());
+                vh.txt_option.setOnClickListener(v ->
+                {
+                    PopupMenu popupMenu = new PopupMenu(SearchInquiries.this,vh.txt_option);
+                    popupMenu.inflate(R.menu.optioni_menu);
+                    popupMenu.setOnMenuItemClickListener(item->
+                    {
+                        switch (item.getItemId())
+                        {
+                            case R.id.menu_edit:
+                                Intent intent = new Intent(SearchInquiries.this,AddInquiry.class);
+                                intent.putExtra("EDIT", (Parcelable) inqn);
+                                startActivity(intent);
+                                break;
+                            case R.id.menu_remove:
+                                DAOInquiryn dao = new DAOInquiryn();
+                                dao.remove(inqn.getKey()).addOnSuccessListener(suc->
+                                {
+                                    Toast.makeText(SearchInquiries.this,"Record is Removed",Toast.LENGTH_SHORT).show();
+
+                                }).addOnFailureListener(er->
+                                {
+                                    Toast.makeText(SearchInquiries.this, ""+er.getMessage(), Toast.LENGTH_SHORT).show();
+                                });
+                                break;
+
+                        }
+                        return false;
+                    });
+                    popupMenu.show();
+                });
+            }
+
+            @NonNull
+            @Override
+            public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(SearchInquiries.this).inflate(R.layout.layout_itemi,parent,false);
+                return new InquiryVH(view);
+            }
+
+            @Override
+            public void onDataChanged() {
+                Toast.makeText(SearchInquiries.this, "Data Changed", Toast.LENGTH_SHORT).show();
+            }
+        };
+        recyclerView.setAdapter(adapter);
+
         loadData();
 
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -67,14 +145,15 @@ public class SearchInquiries extends AppCompatActivity {
     private void loadData() {
         swipeRefreshLayout.setRefreshing(true);
         dao.get(key).addValueEventListener(new ValueEventListener() {
-            @SuppressLint("NotifyDataSetChanged")
+
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot)
             {
                 ArrayList<Inquiryn> inqns = new ArrayList<>();
                 for (DataSnapshot data :snapshot.getChildren())
                 {
-                    data.getValue(Inquiryn.class);
+                    Inquiryn inqn = data.getValue(Inquiryn.class);
+                    inqn.setKey(data.getKey());
                     inqns.add(inqn);
                     key = data.getKey();
                 }
@@ -131,5 +210,18 @@ public class SearchInquiries extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
+        adapter_.startListening();
+    }
+    @Override
+    protected void onStop()
+    {
+        super.onStop();
+        adapter_.stopListening();
     }
 }
