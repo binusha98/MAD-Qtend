@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Salary Management</string>
+    <string name="id2">ID</string>
+    <string name="name2">Name</string>
+    <string name="bsalary2">Basic Salary</string>
+    <string name="ot2">OT amount</string>
+    <string name="total2">Total Salary</string>
+    <string name="submit_btn">SUBMIT</string>
+    <string name="display_btn">DISPLAY</string>
+    <string name="id">ID</string>
+    <string name="name">Name</string>
+    <string name="bsalary">Basic Salary</string>
+    <string name="ot">OT amount</string>
+    <string name="total">Total Salary</string>
+    <string name="back_btn">Back</string>
+    <string name="edit_btn">Edit</string>
+    <string name="title1">Title</string>
+    <string name="title">Title</string>
+    <string name="id1">ID</string>
+    <string name="name1">Name</string>
+    <string name="bsalary1">Basic Salary</string>
+    <string name="ot1">OT Amount</string>
+    <string name="total1">Total</string>
+    <string name="submit_btn1">Submit</string>
+    <string name="delete_btn">Delete</string>
+    <string name="add_btn">Add</string>
+    <string name="update_btn">update</string>
+    <string name="download_btn">download</string>
+    <string name="back_btn2">back2</string>
+    <string name="title3">Title3</string>
+</resources>
