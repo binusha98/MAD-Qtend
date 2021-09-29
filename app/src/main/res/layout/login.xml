@@ -6,6 +6,22 @@
              android:layout_height="match_parent"
              android:background="@drawable/background">
 
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/uname"
+        android:layout_width="275dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="36dp"
+        android:background="#26C6DA"
+        android:hint="@string/uname"
+        android:shadowColor="#F3EFEF"
+        android:textColor="#FAF8F8"
+        android:textColorHint="#FBFAFA"
+        app:layout_constraintBottom_toTopOf="@+id/pswd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar4"
         android:layout_width="412dp"
@@ -50,76 +66,65 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/signin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="232dp"
         android:text="@string/signin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/forgetpassword"
-        android:textColor="#26A69A"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginBottom="36dp"
-        android:text="@string/signup"
-        android:textColor="#EC407A"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginRight="160dp"
+        android:layout_marginBottom="48dp"
         android:text="@string/asamember"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView10" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="191dp"
-        android:layout_height="39dp"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/pswd"
+        android:layout_width="275dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="76dp"
+        android:background="#26C6DA"
+        android:hint="@string/pswd"
+        android:shadowColor="#F3EFEF"
+        android:textColor="#FAF8F8"
+        android:textColorHint="#FBFAFA"
+        app:layout_constraintBottom_toTopOf="@+id/signin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <Button
+        android:id="@+id/fgtpswd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:background="#26C6DA"
-        android:ems="10"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:textColor="#F8F6F6"
-        android:textColorHint="#FAF6F6"
+        android:text="@string/fgtpswd"
+        app:backgroundTint="?android:attr/textColorTertiary"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/signin" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="191dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="64dp"
-        android:background="#26C6DA"
-        android:ems="10"
-        android:hint="@string/username"
-        android:inputType="number|textPersonName"
-        android:textColorHint="#FAF7F7"
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="@string/signup"
+        app:backgroundTint="?attr/colorError"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
