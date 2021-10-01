@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 public class DAOInquiryn
 {
-    private final DatabaseReference databaseReference;
+    private DatabaseReference databaseReference;
     public DAOInquiryn()
     {
         FirebaseDatabase db =FirebaseDatabase.getInstance();
@@ -20,12 +20,14 @@ public class DAOInquiryn
         //if(inqn ==null) throw exception
         return databaseReference.push().setValue(inqn);
     }
+
     public Task<Void> update(String key, HashMap<String ,Object> hashMap)
     {
         return databaseReference.child(key).updateChildren(hashMap);
     }
     public Task<Void> remove(String key)
     {
+
         return databaseReference.child(key).removeValue();
     }
     public Query get(String key)

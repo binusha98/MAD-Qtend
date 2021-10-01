@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="2dp"
     android:background="@drawable/addemp">
 
@@ -27,209 +26,68 @@
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:padding="5dp"
-            android:src="@drawable/googleg_standard_color_18" />
+            android:src="@drawable/inquiryimage" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
             <TextView
-                android:id="@+id/textView22"
-                android:layout_width="match_parent"
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:background="#229CFC"
-                android:gravity="center"
-                android:text="@string/rSearchInquiry"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                tools:ignore="TextContrastCheck" />
+                android:text="Text"
+                android:textSize="20sp" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Text"
+                android:textSize="20sp" />
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
 
-                    <SearchView
-                        android:layout_width="152dp"
-                        android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/editTextTextEmailAddress"
+                android:layout_width="292dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Text"
+                android:textSize="20sp" />
 
-                    <Button
-                        android:id="@+id/button5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="35dp"
-                        android:text="@string/rSearchInquiry"
-                        android:textSize="12sp"
-                        app:backgroundTint="#229CFC"
-                        app:iconPadding="60dp"
-                        tools:ignore="TouchTargetSizeCheck" />
 
-                </TableRow>
-            </TableLayout>
+            <TextView
+                android:id="@+id/editTextDate"
+                android:layout_width="219dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Text"
+                android:textSize="20sp" />
 
-            <TableLayout
-                android:layout_width="wrap_content"
-                android:layout_height="863dp">
 
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/editTextNumber"
+                android:layout_width="286dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Text"
+                android:textSize="20sp" />
 
-                    <TextView
-                        android:id="@+id/textView24"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/rempID"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName8"
-                        android:layout_width="195dp"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        tools:text="EMP0002" />
-                </TableRow>
+            <TextView
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="214dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Text"
+                android:textSize="20sp" />
 
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
 
-                    <TextView
-                        android:id="@+id/textView25"
-                        android:layout_width="89dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/rempName"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/editTextTextPersonName9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        tools:text="Ishan Kalpadith" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/textView26"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/rEmail"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/editTextTextEmailAddress4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="textEmailAddress"
-                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-                        tools:text="ishan@gmail.com" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/textView27"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/rDate"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/editTextDate3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="date"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        tools:text="2021/07/11" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/textView28"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/rInquiryType"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <RadioButton
-                            android:id="@+id/radioButton10"
-                            android:layout_width="wrap_content"
-                            android:layout_height="30dp"
-                            android:text="@string/rConfirmationInquiry"
-                            tools:ignore="TouchTargetSizeCheck" />
-
-                        <RadioButton
-                            android:id="@+id/radioButton11"
-                            android:layout_width="wrap_content"
-                            android:layout_height="26dp"
-                            android:text="@string/rGuidedInquiry"
-                            tools:ignore="TouchTargetSizeCheck" />
-
-                        <RadioButton
-                            android:id="@+id/radioButton12"
-                            android:layout_width="wrap_content"
-                            android:layout_height="21dp"
-                            android:text="@string/rOtherInquiry"
-                            tools:ignore="TouchTargetSizeCheck" />
-                    </RadioGroup>
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/textView29"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/rDescription"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/editTextTextMultiLine4"
-                        android:layout_width="192dp"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:gravity="start|top"
-                        android:inputType="textMultiLine"
-                        tools:ignore="SpeakableTextPresentCheck"
-                        tools:text="I would like to ask you about the cost of project and the quality of the materials number 106." />
-                </TableRow>
-            </TableLayout>
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

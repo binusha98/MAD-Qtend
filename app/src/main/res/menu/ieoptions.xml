@@ -8,9 +8,10 @@
         app:showAsAction="never" />
     <item
         android:id="@+id/textView8"
-        android:icon="@android:drawable/ic_menu_myplaces"
+        android:icon="@android:drawable/ic_menu_search"
         android:title="@string/rEditInquiry"
-        app:actionViewClass="android.widget.SearchView" />
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/textView23"
@@ -24,10 +25,6 @@
         android:title="@string/rHowAboutOurService"
         app:actionViewClass="android.widget.SearchView" />
 
-    <item
-        android:icon="@android:drawable/ic_menu_search"
-        android:title="Search"
-        app:showAsAction="always" />
     <item
         android:icon="@drawable/profile1"
         android:title="Profile"

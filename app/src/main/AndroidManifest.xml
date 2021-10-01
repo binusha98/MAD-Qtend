@@ -10,20 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Inquiry" >
         <activity
-            android:name=".HowAboutOurService"
-            android:exported="true" />
+            android:name=".HowAboutOurService" />
         <activity
-            android:name=".MyInquiry"
-            android:exported="true" />
+            android:name=".MyInquiry" />
         <activity
-            android:name=".SearchInquiries"
-            android:exported="true" />
+            android:name=".SearchInquiries" />
         <activity
-            android:name=".DeleteInquiry"
-            android:exported="true" />
+            android:name=".DeleteInquiry" />
         <activity
-            android:name=".EditInquiry"
-            android:exported="true" />
+            android:name=".EditInquiry" />
         <activity
             android:name=".AddInquiry"
             android:exported="true" >

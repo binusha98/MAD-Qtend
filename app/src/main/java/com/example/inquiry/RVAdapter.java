@@ -2,7 +2,6 @@ package com.example.inquiry;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,28 +24,34 @@ public class RVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
     public void setItems(ArrayList<Inquiryn> inqn)
     {
+
         list.addAll(inqn);
     }
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+    {
         View view = LayoutInflater.from(context).inflate(R.layout.layout_itemi,parent,false);
         return new InquiryVH(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position)
+    {
+        Inquiryn e = null;
+        this.onBindViewHolder(holder,position,e);
+    }
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position, Inquiryn e)
+    {
 
         InquiryVH vh = (InquiryVH) holder;
-        Inquiryn inqn = list.get(position);
+        Inquiryn inqn = e==null? list.get(position):e;
         vh.editTextTextPersonName.setText(inqn.getEmployee_ID());
         vh.editTextTextPersonName2.setText(inqn.getEmployee_Name());
         vh.editTextTextEmailAddress.setText(inqn.getEmployee_Email());
         vh.editTextDate.setText(inqn.getEmployee_IDate());
-        vh.radioButton.setText(inqn.getConfirmationInquiry());
-        vh.radioButton2.setText(inqn.getGuidedInquiry());
-        vh.radioButton3.setText(inqn.getOtherInquiry());
+        vh.editTextNumber.setText(inqn.getInquiryType());
         vh.editTextTextMultiLine.setText(inqn.getIDescription());
         vh.txt_option.setOnClickListener(v ->
         {
@@ -58,7 +63,7 @@ public class RVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 {
                     case R.id.menu_edit:
                         Intent intent = new Intent(context,AddInquiry.class);
-                        intent.putExtra("EDIT", (Parcelable) inqn);
+                        intent.putExtra("EDIT", inqn);
                         context.startActivity(intent);
                         break;
                     case R.id.menu_remove:
@@ -67,6 +72,7 @@ public class RVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                         {
                             Toast.makeText(context,"Record is Removed",Toast.LENGTH_SHORT).show();
                             notifyItemRemoved(position);
+                            list.remove(inqn);
                         }).addOnFailureListener(er->
                         {
                             Toast.makeText(context, ""+er.getMessage(), Toast.LENGTH_SHORT).show();
@@ -81,7 +87,8 @@ public class RVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
 
     @Override
-    public int getItemCount() {
+    public int getItemCount()
+    {
         return list.size();
     }
 }

@@ -12,62 +12,31 @@ public class Inquiryn implements Serializable
     private String Employee_Name;
     private String Employee_Email;
     private String Employee_IDate;
-    private String ConfirmationInquiry;
-    private String GuidedInquiry;
-    private String OtherInquiry;
+    private String InquiryType;
     private String IDescription;
 
-    private String InquiryType;
+
 
     public Inquiryn(){}
 
-    public Inquiryn(String employee_ID, String employee_Name, String employee_Email, String employee_IDate, String iDescription,String confirmationInquiry,String guidedInquiry,String otherInquiry) {
-        Employee_ID = employee_ID;
-        Employee_Name = employee_Name;
-        Employee_Email = employee_Email;
-        Employee_IDate = employee_IDate;
-        IDescription = iDescription;
-        ConfirmationInquiry = confirmationInquiry;
-        GuidedInquiry = guidedInquiry;
-        OtherInquiry = otherInquiry;
+    public Inquiryn(String Employee_ID, String Employee_Name, String Employee_Email, String Employee_IDate,String InquiryType, String IDescription) {
+        this.Employee_ID = Employee_ID;
+        this.Employee_Name = Employee_Name;
+        this.Employee_Email = Employee_Email;
+        this.Employee_IDate = Employee_IDate;
+        this.InquiryType = InquiryType;
+        this.IDescription = IDescription;
+
 
     }
-
-
-
-
-
-    public String getConfirmationInquiry() {
-     return ConfirmationInquiry;
-     }
-
-     public void setConfirmationInquiry(String confirmationInquiry) {
-            ConfirmationInquiry = confirmationInquiry;
-     }
-
-    public String getGuidedInquiry() {
-      return GuidedInquiry;
-     }
-
-    public void setGuidedInquiry(String guidedInquiry) {
-       GuidedInquiry = guidedInquiry;
+    public String getKey() {
+        return key;
     }
 
-    public String getOtherInquiry() {
-       return OtherInquiry;
+    public void setKey(String key) {
+        this.key = key;
     }
 
-    public void setOtherInquiry(String otherInquiry) {
-          OtherInquiry = otherInquiry;
-        }
-
-    public String getInquiryType() {
-     return InquiryType;
-     }
-
-     public void setInquiryType(String inquiryType) {
-       InquiryType = inquiryType;
-     }
     public String getEmployee_ID() {
         return Employee_ID;
     }
@@ -108,16 +77,13 @@ public class Inquiryn implements Serializable
         this.IDescription = IDescription;
     }
 
-    public String getKey() {
-        return key;
+    public String getInquiryType() {
+        return InquiryType;
     }
 
-    public void setKey(String key) {
-        this.key = key;
+    public void setInquiryType(String inquiryType) {
+        InquiryType = inquiryType;
     }
-
-
-
 
 
 }

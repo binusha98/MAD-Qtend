@@ -41,7 +41,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName13"
+                android:id="@+id/addTextTextPersonName13"
                 android:layout_width="278dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -62,7 +62,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName14"
+                android:id="@+id/addTextTextPersonName14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -83,7 +83,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextTextEmailAddress7"
+                android:id="@+id/addTextTextEmailAddress7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -113,7 +113,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="#FFFFFF"
-        android:numStars="3"
+        android:numStars="4"
         android:stepSize="1.0"
         tools:ignore="SpeakableTextPresentCheck" />
 
