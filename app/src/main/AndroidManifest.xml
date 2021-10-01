@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.employeesalary">
+
+
+
+
+<application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/Salary"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.EmployeeSalary">
+    <activity android:name=".Search" />
+    <activity android:name=".Add_Salary" />
+    <activity android:name=".Delete_Salary" />
+    <activity android:name=".Update_Salary" />
+    <activity android:name=".RVActivity" />
+    <activity
+        android:name=".salary"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+</application>
+
+</manifest>

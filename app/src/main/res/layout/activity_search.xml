@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/addemp"
+android:orientation="vertical"
+tools:context=".Search">
+
+<EditText
+    android:id="@+id/topic_V"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginEnd="-1dp"
+    android:layout_marginRight="-1dp"
+    android:background="@color/blue"
+    android:ems="10"
+    android:gravity="center"
+    android:inputType="textPersonName"
+    android:text="Employee Salary Details"
+    android:textColor="#FFFFFF"
+    android:textSize="24sp" />
+
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="70dp" />
+
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="149dp"
+            android:layout_height="58dp"
+            android:gravity="left|center_vertical"
+            android:text="@string/name"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/add_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Binusha" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_designation"
+            android:layout_width="139dp"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:text="@string/designation"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/add_Designation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Manager" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_basicSalary"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="@string/basic_salary"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/add_basicSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="50000" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_deduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="@string/deductions"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/add_deductions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="3000" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical">
+
+        <TextView
+            android:id="@+id/txt_bonus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bonus"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/add_bonus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="10000" />
+    </TableRow>
+
+<TableRow>
+
+        <TextView
+            android:id="@+id/txt_totalSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_Salary"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/add_totalSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="100000" />
+
+
+    </TableRow>
+
+</TableLayout>
+
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="63dp" />
+
+<TextView
+    android:id="@+id/textViewv8"
+    android:layout_width="match_parent"
+    android:layout_height="98dp"
+    android:text="***An Employee can't add minus values for salary***"
+    android:textColor="#E30F0F"
+    android:textSize="16sp"
+    android:textStyle="bold" />
+
+</LinearLayout>

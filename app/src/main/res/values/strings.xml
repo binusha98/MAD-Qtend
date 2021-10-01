@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Employee Salary</string>
+
+<string name="profile">Profile</string>
+<string name="update_salary">Update Salary</string>
+<string name="search_emp_salary">Search</string>
+<string name="Delete_details">Delete Details</string>
+<string name="topic_Update">Update Salary Details</string>
+<string name="Salary">Salary</string>
+<string name="name">Employee Name</string>
+<string name="go_home">Home</string>
+<string name="add_salary">Add Salary</string>
+
+<string name="designation">Employee Designation</string>
+<string name="basic_salary">Basic Salary</string>
+    <string name="deductions">Deductions</string>
+<string name="bonus">Bonus</string>
+<string name="total_Salary">Total Salary</string>
+<string name="btn_add">Add Details</string>
+<string name="delete_emp_salary">Delete Salary Details</string>
+<string name="btn_delete">Delete</string>
+<string name="add_emp_salary">Add Salary</string>
+<string name="add">Add</string>
+<string name="add_string">Add Salary</string>
+<string name="btn_open">View Details</string>
+</resources>

@@ -1,0 +1,156 @@
+{
+  "project_info": {
+    "project_number": "138258661139",
+    "firebase_url": "https://mad-qtend-default-rtdb.firebaseio.com",
+    "project_id": "mad-qtend",
+    "storage_bucket": "mad-qtend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:138258661139:android:d7daf6ba192d9a33c9e4e6",
+        "android_client_info": {
+          "package_name": "com.example.employeeinquiry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "138258661139-knpgh8s5djpg7tvg15dqbb52u6gipm0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbH7e8ll5H5UPLaYpc2Uu8iBUVdSUGg68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "138258661139-knpgh8s5djpg7tvg15dqbb52u6gipm0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:138258661139:android:9b380f5f800c74c4c9e4e6",
+        "android_client_info": {
+          "package_name": "com.example.employeesalary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "138258661139-knpgh8s5djpg7tvg15dqbb52u6gipm0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbH7e8ll5H5UPLaYpc2Uu8iBUVdSUGg68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "138258661139-knpgh8s5djpg7tvg15dqbb52u6gipm0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:138258661139:android:4f60989483ad8883c9e4e6",
+        "android_client_info": {
+          "package_name": "com.example.inquiry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "138258661139-knpgh8s5djpg7tvg15dqbb52u6gipm0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbH7e8ll5H5UPLaYpc2Uu8iBUVdSUGg68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "138258661139-knpgh8s5djpg7tvg15dqbb52u6gipm0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:138258661139:android:7d2c2b285928642fc9e4e6",
+        "android_client_info": {
+          "package_name": "com.example.mad_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "138258661139-knpgh8s5djpg7tvg15dqbb52u6gipm0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbH7e8ll5H5UPLaYpc2Uu8iBUVdSUGg68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "138258661139-knpgh8s5djpg7tvg15dqbb52u6gipm0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:138258661139:android:4127ab7a83fa6607c9e4e6",
+        "android_client_info": {
+          "package_name": "com.example.salarymanage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "138258661139-knpgh8s5djpg7tvg15dqbb52u6gipm0f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbH7e8ll5H5UPLaYpc2Uu8iBUVdSUGg68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "138258661139-knpgh8s5djpg7tvg15dqbb52u6gipm0f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
