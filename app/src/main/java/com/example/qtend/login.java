@@ -1,24 +1,14 @@
 package com.example.qtend;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-
-
-import android.content.Intent;
-import android.view.View;
-import android.widget.Button;
-
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.text.TextUtils;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -45,6 +35,9 @@ public class login extends AppCompatActivity {
         uname = findViewById(R.id.uname);
         pswd = findViewById(R.id.pswd);
         signin = findViewById(R.id.signin);
+        signup = findViewById(R.id.signup);
+
+        mAuth = FirebaseAuth.getInstance();
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,7 +64,7 @@ public class login extends AppCompatActivity {
 
     private void loginUser(String uname, String pswd) {
 
-        mAuth.signInWithUsernameAndPassword(uname , pswd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithEmailAndPassword(uname , pswd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){

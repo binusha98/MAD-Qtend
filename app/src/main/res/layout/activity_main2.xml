@@ -18,17 +18,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="20dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="92dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.092"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/searchView"
-        app:srcCompat="@android:drawable/ic_menu_edit" />
-
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/desiga"
         android:layout_width="275dp"
@@ -47,7 +36,7 @@
         android:id="@+id/namea"
         android:layout_width="275dp"
         android:layout_height="33dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="74dp"
         android:background="#26C6DA"
         android:hint="@string/fullname"
         android:shadowColor="#F3EFEF"
@@ -55,7 +44,7 @@
         android:textColorHint="#FBFAFA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar3"
@@ -125,16 +114,6 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="89dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
-        tools:srcCompat="@tools:sample/avatars" />
 
     <Button
         android:id="@+id/deletea"

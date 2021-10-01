@@ -38,7 +38,7 @@
         android:id="@+id/pswde"
         android:layout_width="275dp"
         android:layout_height="33dp"
-        android:layout_marginTop="308dp"
+        android:layout_marginTop="240dp"
         android:background="#26C6DA"
         android:hint="@string/pswde"
         android:shadowColor="#F3EFEF"
@@ -66,7 +66,7 @@
         android:id="@+id/textView19"
         android:layout_width="352dp"
         android:layout_height="28dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="28dp"
         android:text="@string/conditionregister"
         android:textColor="#EF5350"
         android:textSize="10sp"
@@ -74,20 +74,6 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pswde" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/unamee"
-        android:layout_width="275dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="36dp"
-        android:background="#26C6DA"
-        android:hint="@string/usernamer"
-        android:shadowColor="#F3EFEF"
-        android:textColor="#FAF8F8"
-        android:textColorHint="#FBFAFA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phne" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/desig"
@@ -164,7 +150,7 @@
         android:id="@+id/signupe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="40dp"
         android:text="@string/signupr"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
