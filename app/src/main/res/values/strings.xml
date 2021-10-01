@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MAD_APP</string>
+    <string name="add_emp_attendance">Add Employee Attendance Details</string>
+    <string name="emp_id">Employee ID</string>
+    <string name="emp_name">Employee Name</string>
+    <string name="emp_ot_hrs">OT Hours</string>
+    <string name="emp_work_days">Work Days</string>
+    <string name="emp_no_pay_days">No Pay Days</string>
+    <string name="btn_add">Add Details</string>
+    <string name="btn_open">View Details</string>
+    <string name="btn_delete">Delete</string>
+    <string name="delete_emp_attendance">Delete Attendance Details</string>
+    <string name="mark_emp_attendance">Mark Attendance</string>
+    <string name="mark_string">Mark Attendance</string>
+    <string name="mark">Mark</string>
+    <string name="topic_Update">Update Attendance Details</string>
+    <string name="profile">Profile</string>
+    <string name="go_home">Home</string>
+    <string name="search_emp_attendance">Search</string>
+    <string name="update_attendance">Update Attendance</string>
+    <string name="Delete_details">Delete Details</string>
+    <string name="mark_attendance">Mark Attendance</string>
+</resources>

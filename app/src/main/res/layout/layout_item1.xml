@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:background="@drawable/addemp">
+
+    <TextView
+        android:id="@+id/txt_option1"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="&#8942;"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        tools:ignore="RtlCompat" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarThumbHorizontal="@drawable/logo2"
+        android:scrollbarThumbVertical="@drawable/logo2"
+        android:scrollbarTrackHorizontal="@drawable/logo2"
+        android:scrollbarTrackVertical="@drawable/logo2">
+
+        <ImageView
+            android:id="@+id/img_emp"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:padding="5dp"
+            android:src="@drawable/profile" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName50"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="ID" />
+
+                    <TextView
+                        android:id="@+id/txt_ida"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="Text"
+                        android:textSize="20sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName51"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="DATE:" />
+
+                    <TextView
+                        android:id="@+id/txt_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="Text"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+
+            </TableLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
